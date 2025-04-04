@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교육 운영 현황</title>
+    <link rel="stylesheet" href="/static/common/css/Management/_manageheader.css">
+    <link rel="stylesheet" href="/static/common/css/Management/ManageProfessorList.css">
+    <link rel="stylesheet" href="/static/common/css/Management/_managefooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="nav">
+                <div class="navbar">
+                    <div class="navbar-item"><a href="/static/main.html">HOME</a></div>
+                    <div class="navbar-item"><a href="#">사이트맵</a></div>
+                    <div class="navbar-item"><a href="#">로그아웃</a></div>
+                </div>
+            </div>
+            <div class="headerbar">
+                <article class="headerbarin">
+                    <a href="/static/Management/Managemain.html"><img src="/static/common/images/admin_logo.png" alt="그린대학교"></a>
+                </article>
+            </div>
+        </header>
+        <main>
+            <aside> 
+                <div class="setting">
+                    <h4><img src="/static/common/images/ico-admin-setting.png" alt="setting">환경설정</h4>
+                    <a href="">· 기본환경정보</a><br>
+                    <a href="">· 약관관리</a>
+                </div>
+                <div class="management">
+                    <h4><img src="/static/common/images/ico-admin-academic.png" alt="academic">학사운영</h4>
+                    <a href="">· 교육 운영 현황</a><br>
+                    <a href="">· 학년별 학생 현황</a><br>
+                    <a href="">· 학과별 학생 현황</a><br>
+                    <a href="">· 강의 목록</a><br>
+                    <a href="">· 강의 등록</a><br>
+                    <a href="">· 수강 현황</a>
+                </div>
+                <div class="personnelmanage">
+                    <h4><img src="/static/common/images/ico-admin-persons.png" alt="persons">인사관리</h4>
+                    <a href="">· 학생 목록 및 등록</a><br>
+                    <a href="">· 교수 목록 및 등록</a><br>
+                    <a href="">· 임직원 목록 및 등록</a>
+                </div>
+                <div class="department">
+                    <h4><img src="/static/common/images/ico-admin-college.png" alt="college">대학 및 학과</h4>
+                    <a href="">· 대학 및 학과 목록</a><br>
+                    <a href="">· 대학 및 학과 등록</a>
+                </div>
+                <div class="board">
+                    <h4><img src="/static/common/images/ico-admin-board.png" alt="board">게시판관리</h4>
+                    <a href="">· 입학안내 공지사항</a><br>
+                    <a href="">· 학사안내 공지사항</a><br>
+                    <a href="">· 커뮤니티 공지사항</a><br>
+                    <a href="">· 입학상담</a><br>
+                    <a href="">· 질문 및 답변</a><br>
+                    <a href="">· 식단안내</a><br>
+                    <a href="">· 자료실</a>
+                </div>
+            </aside>
+            <div class="managemain">
+                <article class="managemaintop">
+                    <h4>학생 목록</h4>
+                    <h3>인사관리 ><p>학생 목록</p></h3>
+                </article>
+                <div class="firsttb">
+                  <div class="search">
+                        <select class="dropdown">
+                            <option>검색조건</option>
+                            <option>학번</option>
+                            <option>이름</option>
+                            <option>주민번호</option>
+                            <option>휴대폰</option>
+                            <option>이메일</option>
+                            <option>학과</option>
+                            <option>학년</option>
+                            <option>학기</option>
+                            <option>상태</option>
+                        
+                        </select>
+                        <input type="text" placeholder="검색어를 입력해 주세요">
+                        <div class="searchbtn"> 
+                            <a href="">검색</a>
+                        </div>
+                    </div>
+                    <table>
+                            <tr>
+                               <th>교수번호</th>
+                               <th>이름</th>
+                               <th>주민번호</th>
+                               <th>휴대폰</th>
+                               <th>이메일</th>
+                               <th>학과</th>
+                               <th>직위</th>
+                               <th>재직여부</th>
+                               <th>임용일</th>
+                            </tr>
+                        
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>부교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>부교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>조교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>조교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>조교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="ing">재직중</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="rest">휴직</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="out">퇴직</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td>
+                                <td>정교수</td>
+                                <td class="out">퇴직</td>
+                                <td>1</td>
+                            </tr>
+
+                            
+                        
+                    </table>
+                    <article class="pagebtn">
+                        <a href=""><img src="/static/common/images/btn-first-page.png" alt="firstarr"></a>
+                        <a href=""><img src="/static/common/images/btn-prev-page.png" alt="firstarr"></a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href=""><img src="/static/common/images/btn-next-page.png" alt="firstarr"></a>
+                        <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
+                        <button>등록</button>
+                    </article>
+                </div> 
+            </div>
+            </main>
+            <footer>
+                <div class="footertxt">
+                    <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+    </html>

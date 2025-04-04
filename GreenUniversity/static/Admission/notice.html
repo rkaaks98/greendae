@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="/static/common/css/_header.css">
+    <link rel="stylesheet" href="/static/common/css/_footer.css">
+    <link rel="stylesheet" href="/static/common/css/homebar.css">
+    <link rel="stylesheet" href="/static/Admission/css/admission.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<!---------------------헤더------------------------------->
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="nav">
+                <div class="navbar">
+                    <div class="navbar-item"><a href="#">HOME</a></div>
+                    <div class="navbar-item"><a href="#">사이트맵</a></div>
+                    <div class="navbar-item"><a href="#">로그인</a></div>
+                    <div class="navbar-item"><a href="#">학생지원</a></div>
+                </div>
+            </div>
+            <div class="headerbar">
+                <a href="#"><img src="/static/common/images/header_logo.png" alt="그린대학교"></a>
+                <ul id="quickmenu">
+                    <li><a href="#">대학소개</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">총장 인사말</a></li>
+                            <li><a href="#">교육이념</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">입학안내</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">수시모집</a></li>
+                            <li><a href="#">정시모집</a></li>
+                            <li><a href="#">편입학</a></li>
+                            <li><a href="#">입학상담</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">대학·대학원</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">인문사회대학</a></li>
+                            <li><a href="#">자연과학대학</a></li>
+                            <li><a href="#">공과대학</a></li>
+                            <li><a href="#">사범대학</a></li>
+                            <li><a href="#">대학원</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">학사안내</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">학사일정</a></li>
+                            <li><a href="#">수강신청</a></li>
+                            <li><a href="#">성적</a></li>
+                            <li><a href="#">수료 및 졸업</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">대학생활</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">학생회소개</a></li>
+                            <li><a href="#">동아리/스터디</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">뉴스 및 칼럼</a></li>
+                            <li><a href="#">취업정보</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">질문과 답변</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <div class="homebar">
+            <article class="inline">
+                <a href="/static/common/"><img src="/static/common/images/ico-home.png" alt="homeico"></a>
+                <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
+                <a href="/static/Admission/notice.html">입학안내</a>
+                <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
+                <a href="/static/Admission/notice.html">공지사항</a>
+            </article>
+        </div>
+
+
+<!---------------------사이드바------------------------------>
+<main>
+        
+    <article class="side">
+        <h2>입학안내</h2>
+            <ul>
+                <li style="background-color: #3F97F6;"><a href="/static/Admission/notice.html" class="on">공지사항</a></li>
+                <li><a href="/static/Admission/earlyAdmission.html" >수시모집</a></li>
+                <li><a href="/static/Admission/regularAdmission.html" >정시모집</a></li>
+                <li><a href="/static/Admission/transferAdmission.html" >편입학</a></li>
+                <li><a href="/static/Admission/admissionCounseling.html" >입학상담</a></li>
+            </ul>
+    </article>
+    <!---------------------본문------------------------------>
+    <article class="notice">
+        <div class="noticetop">
+            <h4>공지사항</h4>
+        </div>
+        <div class="search">
+            <select class="dropdown">
+                <option>전체</option>
+                <option>제목</option>
+                <option>작성자</option>
+                <option>내용</option>
+            </select>
+            <input type="text" value="검색어를 입력해 주세요">
+            <div class="searchbtn"> 
+                <a href="">검색</a>
+            </div>
+        </div>
+
+        <div class="noticemain">
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="/static/common/images/ico-new01.gif" alt="iconew">2025학년도 신입학 3차 추가모집 모집요강 및 모집...</td>
+                    <td>담당자</td>
+                    <td>24.04.09</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="/static/common/images/ico-new01.gif" alt="iconew">2025학년도 신입학 2차 추가모집 모집요강 및 모집...</td>
+                    <td>담당자</td>
+                    <td>24.04.09</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2025학년도 신입학 추가모집 모집요강 및 모집인원 공지</td>
+                    <td>담당자</td>
+                    <td>24.04.09</td>
+                    <td>160</td>
+                </tr>
+            </table>
+            <article class="pagebtn">
+                <a href=""><img src="/static/common/images/btn-first-page.png" alt="firstarr"></a>
+                <a href=""><img src="/static/common/images/btn-prev-page.png" alt="firstarr"></a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href=""><img src="/static/common/images/btn-next-page.png" alt="firstarr"></a>
+                <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
+            </article>
+        </div>
+    </article>
+    
+</main>
+<!--------------------------푸터-------------------------------->
+
+
+    <footer>
+        <div class="footer">
+            <div class="top-footer">
+                <ul class="footer-link">
+                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li><a href="#" target="_blank">통합정보시스템</a></li>
+                    <li><a href="#" target="_blank">학사일정</a></li>
+                    <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                    <li><a href="#" target="_blank">교내공지사항</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-dropdown">
+                    <a href="#" title="주요사이트 바로가기">주요사이트</a>
+                    <ul>
+                        <li><a href="#" target="_blank">그린대학교</a></li>
+                        <li><a href="#" target="_blank">취업진로지원센터</a></li>
+                        <li><a href="#" target="_blank">현장실습지원센터</a></li>
+                        <li><a href="#" target="_blank">학생생활관</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-content-box">
+                    <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
+                    <ul class="footer-info">
+                        <li>
+                            <ul class="footer-contact">
+                                <li>
+                                    <p>그린대학교</p>
+                                    <p>
+                                        <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
+                                        <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
+                                        <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a>
+                                            <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+    

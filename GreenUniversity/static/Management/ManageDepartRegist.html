@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학 및 학과 등록</title>
+    <link rel="stylesheet" href="/static/common/css/Management/_manageheader.css">
+    <link rel="stylesheet" href="/static/common/css/Management/ManageDepartRegist.css">
+    <link rel="stylesheet" href="/static/common/css/Management/_managefooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="nav">
+                <div class="navbar">
+                    <div class="navbar-item"><a href="/static/main.html">HOME</a></div>
+                    <div class="navbar-item"><a href="#">사이트맵</a></div>
+                    <div class="navbar-item"><a href="#">로그아웃</a></div>
+                </div>
+            </div>
+            <div class="headerbar">
+                <article class="headerbarin">
+                    <a href="/static/Management/Managemain.html"><img src="/static/common/images/admin_logo.png" alt="그린대학교"></a>
+                </article>
+            </div>
+        </header>
+        <main>
+            <aside> 
+                <div class="setting">
+                    <h4><img src="/static/common/images/ico-admin-setting.png" alt="setting">환경설정</h4>
+                    <a href="">· 기본환경정보</a><br>
+                    <a href="">· 약관관리</a>
+                </div>
+                <div class="management">
+                    <h4><img src="/static/common/images/ico-admin-academic.png" alt="academic">학사운영</h4>
+                    <a href="">· 교육 운영 현황</a><br>
+                    <a href="">· 학년별 학생 현황</a><br>
+                    <a href="">· 학과별 학생 현황</a><br>
+                    <a href="">· 강의 목록</a><br>
+                    <a href="">· 강의 등록</a><br>
+                    <a href="">· 수강 현황</a>
+                </div>
+                <div class="personnelmanage">
+                    <h4><img src="/static/common/images/ico-admin-persons.png" alt="persons">인사관리</h4>
+                    <a href="">· 학생 목록 및 등록</a><br>
+                    <a href="">· 교수 목록 및 등록</a><br>
+                    <a href="">· 임직원 목록 및 등록</a>
+                </div>
+                <div class="department">
+                    <h4><img src="/static/common/images/ico-admin-college.png" alt="college">대학 및 학과</h4>
+                    <a href="">· 대학 및 학과 목록</a><br>
+                    <a href="">· 대학 및 학과 등록</a>
+                </div>
+                <div class="board">
+                    <h4><img src="/static/common/images/ico-admin-board.png" alt="board">게시판관리</h4>
+                    <a href="">· 입학안내 공지사항</a><br>
+                    <a href="">· 학사안내 공지사항</a><br>
+                    <a href="">· 커뮤니티 공지사항</a><br>
+                    <a href="">· 입학상담</a><br>
+                    <a href="">· 질문 및 답변</a><br>
+                    <a href="">· 식단안내</a><br>
+                    <a href="">· 자료실</a>
+                </div>
+            </aside>
+            <div class="managemain">
+                <article class="managemaintop">
+                    <h4>대학 및 학과등록</h4>
+                    <div>
+                        <h3>대학 및 학과</h3>
+                        <img src="/static/common/images/bg-link-arr-over.png">
+                        <h3>대학 및 학과 등록</h3>
+                    </div>
+                </article>
+                <div>
+                    <img src="/static/common/images/bullet-h4.png">
+                    <h3>대학 정보 입력</h3>
+                </div>
+                <form class="university">
+                    <table>
+                        <tr>
+                            <td>대학명</td>
+                            <td><input type="text" class="name" placeholder="예) 인문사회대학"></td>
+                        </tr>
+                        <tr>
+                            <td>대학 영문명</td>
+                            <td><input type="text" class="EngName" placeholder="예) Humanities And Social Sciences"></td>
+                        </tr>
+                        <tr>   
+                            <td>대학 소개</td>
+                            <td>
+                                <input type="text" class="title" placeholder="대학 소개 제목입력">
+                                <input type="text" class="content" placeholder="대학 소개 내용입력"><br>
+                                <input type="file" class="file"><span>대학·대학원 소개 페이지 출력 이미지(320 x 240) 첨부</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="btn_university">등록</button>
+                </form>
+                <div>
+                    <img src="/static/common/images/bullet-h4.png">
+                    <h3>학과 정보 입력</h3>
+                </div>
+                <form class="lesson">
+                    <table>
+                        <tr>
+                            <td>학과번호</td>
+                            <td><span>고유 2자리 숫자 자동생성</span></td>
+                            <td>단과대학</td>
+                            <td>
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>학과명</td>
+                            <td><input type="text" class="lname" placeholder="학과명 입력"></td>
+                            <td>영문명</td>
+                            <td><input type="text" class="eng_lname" placeholder="학과 공식 영문 이름"></td>
+                        </tr>
+                        <tr>
+                            <td>설립연도</td>
+                            <td><input type="date" class="year"></td>
+                            <td>학과장</td>
+                            <td>
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>학과 연락처</td>
+                            <td><input type="text" placeholder="학과 연락처 입력"></td>
+                            <td>학과 사무실</td>
+                            <td><input type="text" placeholder="인문관 3층 306호"></td>
+                        </tr>
+                    </table>
+                    <button class="btn_lesson">등록</button>
+                </form>
+            </div>
+            </main>
+            <footer>
+                <div class="footertxt">
+                    <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+    </html>

@@ -1,0 +1,119 @@
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+aside {
+    float: left;
+}
+
+aside > span {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+nav {
+    width: 210px;
+    height: 242px;
+    border-top: 2px solid #222;
+    margin-top: 15px;
+}
+
+nav > a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    line-height: 60px;
+    padding-left: 15px;
+}
+
+.on {
+    background-color: #3F97F6;
+    color: #FFF;
+}
+
+nav > a:hover {
+    background-color: #3F97F6;
+    color: #FFF;
+}
+
+section {
+    margin-left: 270px;
+}
+
+section > span {
+    display: block;
+    max-width: 930px;
+    height: 56px;
+    color: #333;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.read {
+    display: flex;
+}
+
+.read > div {
+    display: flex;
+    width: 310px;
+    height: 120px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.read > div:nth-child(1) {background-color: #89b7eb;}
+.read > div:nth-child(2) {background-color: #84c8a8;}
+.read > div:nth-child(3) {background-color: #a3a2a2;}
+
+.read > div > img {
+    margin-right: 20px;
+}
+
+.read > div > div {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.read a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+table {
+    margin: 20px 0 60px 400px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+table td, th {
+    padding: 15px;
+}
+
+table th {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid #333;
+}
+
+table td {
+    border-bottom: 1px dotted #dcdcdc;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    margin: 45px 0 60px 40px;
+    float: left;
+}
+

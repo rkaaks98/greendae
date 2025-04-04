@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그린대학교 학사관리시스템-강의등록</title>
+    <link rel="stylesheet" href="/static/common/css/Management/_manageheader.css">
+    <link rel="stylesheet" href="/static/common/css/Management/manageregister.css">
+    <link rel="stylesheet" href="/static/common/css/Management/_managefooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="/static/common/js/ManageRegister.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="nav">
+                <div class="navbar">
+                    <div class="navbar-item"><a href="#">HOME</a></div>
+                    <div class="navbar-item"><a href="#">사이트맵</a></div>
+                    <div class="navbar-item"><a href="#">로그아웃</a></div>
+                </div>
+            </div>
+            <div class="headerbar">
+                <article class="headerbarin">
+                    <a href="#"><img src="/static/common/images/admin_logo.png" alt="그린대학교"></a>
+                </article>
+            </div>
+        </header>
+        <main>
+            <aside> 
+                <div class="setting">
+                    <h4><img src="/static/common/images/ico-admin-setting.png" alt="setting">환경설정</h4>
+                    <a href="">· 기본환경정보</a><br>
+                    <a href="">· 약관관리</a>
+                </div>
+                <div class="management">
+                    <h4><img src="/static/common/images/ico-admin-academic.png" alt="academic">학사운영</h4>
+                    <a href="">· 교육 운영 현황</a><br>
+                    <a href="">· 학년별 학생 현황</a><br>
+                    <a href="">· 학과별 학생 현황</a><br>
+                    <a href="">· 강의 목록</a><br>
+                    <a href="">· 강의 등록</a><br>
+                    <a href="">· 수강 현황</a>
+                </div>
+                <div class="personnelmanage">
+                    <h4><img src="/static/common/images/ico-admin-persons.png" alt="persons">인사관리</h4>
+                    <a href="">· 학생 목록 및 등록</a><br>
+                    <a href="">· 교수 목록 및 등록</a><br>
+                    <a href="">· 임직원 목록 및 등록</a>
+                </div>
+                <div class="department">
+                    <h4><img src="/static/common/images/ico-admin-college.png" alt="college">대학 및 학과</h4>
+                    <a href="">· 대학 및 학과 목록</a><br>
+                    <a href="">· 대학 및 학과 등록</a>
+                </div>
+                <div class="board">
+                    <h4><img src="/static/common/images/ico-admin-board.png" alt="board">게시판관리</h4>
+                    <a href="">· 입학안내 공지사항</a><br>
+                    <a href="">· 학사안내 공지사항</a><br>
+                    <a href="">· 커뮤니티 공지사항</a><br>
+                    <a href="">· 입학상담</a><br>
+                    <a href="">· 질문 및 답변</a><br>
+                    <a href="">· 식단안내</a><br>
+                    <a href="">· 자료실</a>
+                </div>
+            </aside>
+            <div class="managemain">
+                <article class="managemaintop">
+                    <h4>강의등록</h4>
+                    <h3>학사운영 ><p> 강의 등록</p></h3>
+                </article>
+                <div class="register">
+                    <div class="info">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">기본정보 입력</h4>
+                        <table class="basic">
+                            <tr>
+                                <th>과목코드</th>
+                                <td class="redtxt">학과 코드+연도+학기+순번 조합 자동생성</td>
+                                <th>개설학과</th>
+                                <td>
+                                    <select class="university" onchange="updateDepartments()" id="collegeSelect">
+                                        <option value="">단과대학선택</option>
+                                        <option value="humanities">인문사회대학</option>
+                                        <option value="naturalscience">자연과학대학</option>
+                                        <option value="engineering">공과대학</option>
+                                        <option value="teacher">사범대학</option>
+                                        <option value="graduateSchool">대학원</option>
+                                    </select>
+                                    <select id="departmentSelect">
+                                        <option value="">학과를 선택하세요</option>
+                                    </select>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>개설학년</th>
+                                <td>
+                                    <select id="grade">
+                                        <option>1학년</option>
+                                        <option>2학년</option>
+                                        <option>3학년</option>
+                                        <option>4학년</option>
+                                    </select>
+                                </td>
+                                <th>학점</th>
+                                <td>
+                                    <select id="score">
+                                        <option>1학점</option>
+                                        <option>2학점</option>
+                                        <option>3학점</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이수구분</th>
+                                <td>
+                                    <select id="selectmajor">
+                                        <option>전공 선택</option>
+                                        <option>전공 필수</option>
+                                        <option>교양 선택</option>
+                                        <option>교양 필수</option>
+                                        
+                                    </select>
+                                </td>
+                                <th>담당교수</th>
+                                <td><input type="text" class="professor"></td>
+                            </tr>
+                            <tr>
+                                <th>강의명</th>
+                                <td colspan="3"><input type="text" class="classname" placeholder="강좌명 입력"></td>
+                            </tr>
+                            <tr>
+                                <th>강의 설명</th>
+                                <td colspan="3"><input type="text" class="explain" placeholder="강의 개요 및 목표, 학습 내용 등"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="stdinfo">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">수업정보 입력</h4>
+                        <table>
+                            <tr>
+                                <th>수업 기간</th>
+                                <td colspan="3"><input type="date">~<input type="date"></td>
+                            </tr>
+                            <tr>
+                                <th>수업 시간</th>
+                                <td colspan="3" class="ckarea">
+                                    <input type="time">~<input type="time">
+                                    <label><input type="checkbox" class="ckbox"> 월</label>
+                                    <label><input type="checkbox" class="ckbox"> 화</label>
+                                    <label><input type="checkbox" class="ckbox"> 수</label>
+                                    <label><input type="checkbox" class="ckbox"> 목</label>
+                                    <label><input type="checkbox" class="ckbox"> 금</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>평가방식</th>
+                                <td colspan="3"><input type="text" placeholder="출석 10%, 과제 30%, 시험 60%" class="how"></td>
+                            </tr>
+                            <tr>
+                                <th>교재</th>
+                                <td colspan="3"><input type="text" placeholder="출판사 - 도서명 - 저자 입력" class="book"></td>
+                            </tr>
+                            <tr>
+                                <th>강의실</th>
+                                <td><input type="text" placeholder="인문관 301호" class="room"></td>
+                                <th>최대 수강인원</th>
+                                <td><input type="text"></td>
+                            </tr>
+                        </table>
+                        <button>등록</button>
+                    </div>
+
+                    
+                </div>
+                 
+                
+            </main>
+            <footer>
+                <div class="footertxt">
+                    <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+                </div>
+            </footer>
+        </div>
+        
+    </body>
+
+    </html>
