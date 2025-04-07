@@ -6,13 +6,16 @@ import kr.co.greenuniversity.dto.page.PageRequestDTO;
 import kr.co.greenuniversity.dto.page.PageResponseDTO;
 import kr.co.greenuniversity.entity.Department;
 import kr.co.greenuniversity.entity.Student;
+import kr.co.greenuniversity.entity.user.User;
 import kr.co.greenuniversity.repository.DepartmentRepository;
 import kr.co.greenuniversity.repository.StudentRepository;
+import kr.co.greenuniversity.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -27,6 +30,8 @@ public class StudentService {
     private final StudentRepository studentRepository;
     private final ModelMapper modelMapper;
     private final DepartmentRepository departmentRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public List<StudentDTO> StdfindAll() {
 
@@ -48,6 +53,19 @@ public class StudentService {
         } else {
             throw new IllegalStateException("이미 존재하는 학번입니다: " + generatedId);
         }
+
+        User user = new User();
+        user.setId(generatedId);
+        user.setPassword(passwordEncoder.encode(student.getJumin()));
+        user.setName(student.getName());
+        user.setPhone(student.getPhone());
+        user.setEmail(student.getEmail());
+        user.setAddr1(student.getAddr1());
+        user.setAddr2(student.getAddr2());
+        user.setRole("STUDENT");
+        userRepository.save(user);
+
+
     }
 
     public String generateStudentId(Department department) {

@@ -2,14 +2,17 @@ package kr.co.greenuniversity.service.admin;
 
 import kr.co.greenuniversity.entity.Department;
 import kr.co.greenuniversity.entity.Professor;
+import kr.co.greenuniversity.entity.user.User;
 import kr.co.greenuniversity.repository.DepartmentRepository;
 import kr.co.greenuniversity.repository.ProfessorRepository;
+import kr.co.greenuniversity.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -24,6 +27,8 @@ public class ProfessorService {
     private final ProfessorRepository professorRepository;
     private final ModelMapper modelMapper;
     private final DepartmentRepository departmentRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
 
     public Page<Professor> findAllProfessors(Pageable pageable) {
@@ -40,6 +45,18 @@ public class ProfessorService {
 
         // 저장
         professorRepository.save(professor);
+
+        User user = new User();
+        user.setId(generatedId);
+        user.setPassword(passwordEncoder.encode(professor.getJumin()));
+        user.setName(professor.getName());
+        user.setPhone(professor.getPhone());
+        user.setEmail(professor.getEmail());
+        user.setAddr1(professor.getAddr1());
+        user.setAddr2(professor.getAddr2());
+        user.setRole("PRO");
+
+        userRepository.save(user);
     }
 
     public String generateProfessorId(Department department) {
